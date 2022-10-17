@@ -4,6 +4,7 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import Ticker from 'react-ticker'
 
 
+
 function VideoFooter({channel, description, song}) {
   return (
     <div className='videoFooter'>
