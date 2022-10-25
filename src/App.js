@@ -16,7 +16,7 @@ function App() {
         comments={619}
         bookmarks={7}
         shares={9}
-        
+
         /> 
  
         <Video 
@@ -24,6 +24,10 @@ function App() {
         channel = 'buddy_pal'
         description='Abel makes cool apps'
         song='gravy jingle'
+        likes={79}
+        comments={16}
+        bookmarks={3}
+        shares={2}
         /> 
 
         <Video 
@@ -31,6 +35,10 @@ function App() {
         channel = 'mugiwara78'
         description='doing math and reading with Shaq'
         song='Rick Ross'
+        likes={4922}
+        comments={863}
+        bookmarks={597}
+        shares={1900}
         /> 
      </div>
 
