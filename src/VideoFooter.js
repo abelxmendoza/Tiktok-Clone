@@ -9,15 +9,16 @@ function VideoFooter({channel, description, song}) {
   return (
     <div className='videoFooter'>
         <div className='videoFooter_text'>
-            <h3>@abrownrecluse</h3>
-            <p>Making the TikToks</p>
+            <h3>@{channel}</h3>
+
+            <p>{description}</p>
             <div className='videoFooter_ticker'>
                 <MusicNoteIcon 
                 className= "videoFooter_icon" />
                 <Ticker mode='smooth' className = "ticker">
                     {({index}) => (
                         <>
-                            <p>I am a song!</p>
+                            <p>{song}</p>
                         </>
                     )}
                 </Ticker>

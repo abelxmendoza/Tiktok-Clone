@@ -31,17 +31,18 @@ function VideoSidebar({likes, comments, shares, bookmarks}) {
 
         <div className='videoSidebar_buttons'>
             <MessageIcon fontSize='large'/>
-            <p>15</p>
+            <p>{comments}</p>
+
         </div>
 
         <div className='videoSidebar_buttons'>
             <BookmarkIcon fontSize='large'/>
-            <p>7</p>
+            <p>{bookmarks}</p>
         </div>
 
         <div className='videoSidebar_buttons'>
             <ShareIcon fontSize='large'/>
-            <p>4</p>
+            <p>{shares}</p>
         </div>
     </div>
   )
