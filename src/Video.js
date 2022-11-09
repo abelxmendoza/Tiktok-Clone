@@ -34,7 +34,7 @@ function Video({url, channel, description, song, likes,comments,shares, bookmark
             className='video_player' 
             ref = {videoRef} 
             loop 
-            src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4' 
+            src={url}
             >
 
 

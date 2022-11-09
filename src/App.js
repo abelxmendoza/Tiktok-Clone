@@ -1,12 +1,50 @@
 import './App.css';
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import Video from './Video';
 
+
 function App() {
+
+  const [videos, setVideos] =  useState([])
+
+  useEffect(() => {
+    
+    async function fetchPosts(){
+      const response = await axios.get('/v2/posts');
+      setVideos(response.data);
+
+      return response;
+    }
+
+    fetchPosts();
+    
+  }, []);
+
   return (
     <div className="app">
 
      <div className='app_videos'>
+
+
+      {videos.map(({url, channel, description, song, likes, bookmarks, comments, shares}) => (
+          
+          <Video 
+          url={url}
+          channel={channel}
+          description={description}
+          song={song}
+          likes={likes}
+          bookmarks={bookmarks}
+          comments={comments}
+          shares={shares}
+          />
+
+ 
+
+      ))}
+
+     { /*
         <Video 
         url = 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'
         channel = 'sandwhichGrease'
@@ -19,6 +57,7 @@ function App() {
 
         /> 
  
+
         <Video 
         url = 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'
         channel = 'buddy_pal'
@@ -40,7 +79,12 @@ function App() {
         bookmarks={597}
         shares={1900}
         /> 
+
+
+*/}
      </div>
+
+
 
 
 
